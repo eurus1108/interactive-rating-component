@@ -56,6 +56,10 @@ body {
   display: none;
 }
 
+.active {
+  background-color: var(--n-colorGray500) !important;
+}
+
 /* Main Card */
 
 .card {
@@ -121,10 +125,6 @@ body {
   cursor: pointer;
   transition: all 300ms ease-in-out;
 }
-/* 
-.card__rating-button label:is(:hover, :active) {
-  background-color: var(--n-colorGray500);
-} */
 
 .card__rating-button label:hover,
 .card__rating-button label:active {

@@ -11,3 +11,13 @@ ratingForm.addEventListener("submit", (e) => {
   mainCard.classList.add("hidden");
   secondCard.classList.remove("hidden");
 });
+
+const label = document.querySelectorAll("label");
+let hasClicked = false;
+
+label.forEach((targetElm) => {
+  targetElm.addEventListener("click", function () {
+    label.forEach((elm) => elm.classList.remove("active"));
+    this.classList.add("active");
+  });
+});
