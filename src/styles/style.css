@@ -52,6 +52,10 @@ body {
   height: 100vh;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Main Card */
 
 .card {
@@ -117,8 +121,13 @@ body {
   cursor: pointer;
   transition: all 300ms ease-in-out;
 }
+/* 
+.card__rating-button label:is(:hover, :active) {
+  background-color: var(--n-colorGray500);
+} */
 
-.card__rating-button label:hover {
+.card__rating-button label:hover,
+.card__rating-button label:active {
   background-color: var(--n-colorGray500);
 }
 
@@ -139,7 +148,7 @@ body {
   transition: all 300ms ease-in-out;
 }
 
-.card__submit-button:hover {
+.card__submit-button:is(:hover, :active) {
   color: var(--p-colorOrange);
   background: var(--n-colorGray300);
 }
@@ -188,5 +197,65 @@ body {
     max-width: 27.9rem;
     font-size: var(--font-size-500);
     letter-spacing: 0.13em;
+  }
+}
+
+/* Thank You Message Card */
+
+.card.card--secondary {
+  padding: 4.5rem 4.7rem 4.1rem 3.3rem;
+}
+
+.card__illustration-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__illustration-container img {
+  vertical-align: center;
+}
+
+.card__rating-container {
+  margin: 3.2rem auto 3.4rem;
+  padding: 0.8rem 0 0.5rem;
+  max-width: 19.2rem;
+  width: 100%;
+  background-color: var(--n-colorTransparentGray);
+  border-radius: 99rem;
+}
+
+.card__rating {
+  font-size: var(--font-size-400);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 0.005em;
+  color: var(--p-colorOrange);
+}
+
+.centered {
+  text-align: center;
+}
+
+.card.card--secondary .card__text-container {
+  margin: 0;
+}
+
+@media only screen and (max-width: 400px) {
+  .card.card--secondary {
+    padding: 3.4rem 2.9rem 3.8rem 2.8rem;
+  }
+
+  .card__illustration-container img {
+    max-width: 14.4rem;
+  }
+
+  .card__rating-container {
+    margin-top: 2.4rem;
+    margin-bottom: 3.1rem;
+    max-width: 16.8rem;
+  }
+
+  .card__rating {
+    letter-spacing: -0.025em;
   }
 }

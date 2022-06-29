@@ -30,7 +30,7 @@
   <body>
     <main class="h-wrapper">
       <section class="card-container">
-        <div class="card">
+        <div class="card" id="card-1">
           <div class="card__icon-container">
             <img src="./images/icon-star.svg" alt="Star" />
           </div>
@@ -81,6 +81,21 @@
             </div>
             <button class="card__submit-button">Submit</button>
           </form>
+        </div>
+        <div class="card card--secondary hidden" id="card-2">
+          <div class="card__illustration-container">
+            <img src="./images/illustration-thank-you.svg" alt="Thank You" />
+          </div>
+          <div class="card__rating-container centered">
+            <h2 class="card__rating">You selected <span></span> out of 5</h2>
+          </div>
+          <div class="card__text-container centered">
+            <h1 class="card__headline">Thank you!</h1>
+            <p class="card__body">
+              We appreciate you taking the time to give a rating. If you ever
+              need more support, don’t hesitate to get in touch!
+            </p>
+          </div>
         </div>
       </section>
     </main>
