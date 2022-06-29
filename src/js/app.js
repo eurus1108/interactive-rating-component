@@ -13,7 +13,6 @@ ratingForm.addEventListener("submit", (e) => {
 });
 
 const label = document.querySelectorAll("label");
-let hasClicked = false;
 
 label.forEach((targetElm) => {
   targetElm.addEventListener("click", function () {
